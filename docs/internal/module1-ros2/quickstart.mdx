@@ -1,0 +1,68 @@
+
+---
+displayed_sidebar: null
+---
+# 1. Install ROS 2
+
+Follow the official ROS 2 documentation to install ROS 2 Humble Hawksbill on Ubuntu 22.04.
+
+```bash
+# Set locale
+locale  # check for UTF-8
+
+sudo apt update && sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Add ROS 2 repository
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+
+sudo apt update && sudo apt install curl
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+# Install ROS 2 packages
+sudo apt update
+sudo apt install ros-humble-desktop
+```
+
+## 2. Set up the Workspace
+
+Create a new ROS 2 workspace.
+
+```bash
+# Source ROS 2
+source /opt/ros/humble/setup.bash
+
+# Create a workspace directory
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
+
+# Build the workspace (initially empty)
+colcon build
+```
+
+## 3. Source the Workspace
+
+Add the workspace's setup file to your `.bashrc` to make it available in all new terminals.
+
+```bash
+echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+## 4. Run a Test Example
+
+Run the `talker-listener` example to verify your installation.
+
+```bash
+# Terminal 1
+ros2 run demo_nodes_cpp talker
+
+# Terminal 2
+ros2 run demo_nodes_py listener
+```
+You should see the listener terminal printing messages from the talker.

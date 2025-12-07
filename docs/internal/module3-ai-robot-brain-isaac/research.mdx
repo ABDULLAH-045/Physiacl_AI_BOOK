@@ -1,0 +1,51 @@
+# Research & Literature Review: Module 3: The AI-Robot Brain (NVIDIA Isaac™)
+
+This document summarizes key research areas, technologies, and best practices relevant to building an AI-robot brain using NVIDIA Isaac Sim and Isaac ROS.
+
+## 1. NVIDIA Isaac Sim & Omniverse Ecosystem
+
+-   **Isaac Sim Capabilities**: Investigation into Isaac Sim's features for photorealistic rendering, rigid body physics, multi-robot simulation, and asset import (URDF).
+    -   *Research Question*: What are the performance limitations and scalability of Isaac Sim for complex humanoid models and environments?
+    -   *References*: Official NVIDIA Isaac Sim documentation, Omniverse documentation, relevant GTC keynotes and tutorials.
+-   **Omniverse Integration**: Understanding how Isaac Sim leverages Omniverse for USD (Universal Scene Description), real-time collaboration, and ecosystem extensions.
+    -   *Research Question*: How can custom assets and environments be efficiently integrated and managed within Omniverse for robotics simulations?
+
+## 2. Synthetic Data Generation (SDG) for AI Training
+
+-   **Domain Randomization Techniques**: Exploring various domain randomization strategies (e.g., textures, lighting, object positions, camera properties) within Isaac Sim to improve the generalization of trained AI models.
+    -   *Research Question*: What are the optimal randomization parameters for generating synthetic datasets that effectively bridge the sim-to-real gap for humanoid robot perception tasks?
+    -   *References*: NVIDIA's documentation on SDG in Isaac Sim, academic papers on sim-to-real transfer learning, domain randomization for robotics.
+-   **Dataset Labeling & Export**: Best practices for generating and exporting labeled datasets (bounding boxes, segmentation masks, depth maps) from Isaac Sim in formats compatible with common AI training frameworks (e.g., COCO, PASCAL VOC).
+    -   *Research Question*: What are the most efficient workflows for managing and processing large synthetic datasets generated from Isaac Sim?
+
+## 3. Isaac ROS for Hardware-Accelerated Perception
+
+-   **Isaac ROS Framework**: Detailed study of Isaac ROS components, including hardware-accelerated ROS 2 packages for perception (e.g., VSLAM, object detection, pose estimation) that leverage NVIDIA GPUs.
+    -   *Research Question*: How do Isaac ROS modules integrate with standard ROS 2 nodes, and what are the performance gains compared to CPU-based alternatives?
+    -   *References*: Official Isaac ROS documentation, tutorials, and examples.
+-   **VSLAM Implementation**: Research into implementing Visual SLAM pipelines using Isaac ROS, focusing on accuracy, robustness, and real-time performance for humanoid navigation.
+    -   *Research Question*: What are the best practices for configuring Isaac ROS VSLAM for bipedal humanoid movement, considering potential challenges like changing viewpoints and self-occlusion?
+
+## 4. Nav2 for Bipedal Humanoid Navigation
+
+-   **Nav2 Stack Adaptation**: Investigation into adapting the ROS 2 Nav2 navigation stack for bipedal humanoid robots, which have different kinematic and dynamic constraints than wheeled robots.
+    -   *Research Question*: What modifications or specialized plugins are required in Nav2 for robust path planning and local control for a humanoid robot, especially concerning stability and gait?
+    -   *References*: Nav2 official documentation, academic papers on bipedal navigation, ROS 2 humanoid robotics projects.
+-   **Obstacle Avoidance & Stability**: Research on techniques for real-time obstacle avoidance and maintaining dynamic stability during bipedal locomotion, integrated with Nav2.
+    -   *Research Question*: How can sensor data from Isaac Sim (via Isaac ROS) be effectively utilized by Nav2 for dynamic obstacle avoidance in a humanoid context?
+
+## 5. AI Model Integration & Deployment
+
+-   **Model Conversion (PyTorch to ONNX)**: Understanding the process of converting trained AI models from frameworks like PyTorch to ONNX for optimized inference within ROS 2 pipelines and on NVIDIA hardware.
+    -   *Research Question*: What are the best practices for optimizing ONNX models for deployment on Jetson platforms or other edge devices relevant to humanoid robotics?
+    -   *References*: ONNX documentation, NVIDIA TensorRT documentation, Isaac ROS tutorials on model deployment.
+-   **ROS 2 Integration**: Integrating custom AI models as ROS 2 nodes, consuming sensor data (potentially from Isaac ROS) and publishing control commands or high-level decisions.
+    -   *Research Question*: How can the latency and throughput of AI inference in ROS 2 pipelines be minimized for real-time robotic control?
+
+## References
+
+-   NVIDIA Isaac Sim Documentation: [Link to official docs]
+-   NVIDIA Isaac ROS Documentation: [Link to official docs]
+-   ROS 2 Nav2 Documentation: [Link to official docs]
+-   Relevant academic papers on sim-to-real, domain randomization, bipedal navigation, hardware-accelerated perception.
+-   NVIDIA GTC conference materials and webinars.

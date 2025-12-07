@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Python 3.10+ (for rclpy), C++17 (for examples), Markdown/MDX (for Docusaurus) + ROS 2 Humble/Iron, Gazebo, RViz2, colcon, Docusaurus (001-robotic-nervous-system-ros2)
+- N/A (Content is stored in Markdown files within a Git repository) (001-robotic-nervous-system-ros2)
+
+## Recent Changes
+- 001-robotic-nervous-system-ros2: Added Python 3.10+ (for rclpy), C++17 (for examples), Markdown/MDX (for Docusaurus) + ROS 2 Humble/Iron, Gazebo, RViz2, colcon, Docusaurus
