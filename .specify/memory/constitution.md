@@ -38,7 +38,7 @@ Follow-up TODOs: None
 - **Spec‑Kit‑Plus** (https://github.com/panaversity/spec-kit-plus) – for structured authoring & validation.  
 - **Gemini‑CLI** – to render Spec‑Kit‑Plus sources into Docusaurus markdown.  
 - **Docusaurus** – static‑site generator for the book website.  
-- **GitHub Pages** – hosting the final site (`username.github.io/repo-name`).
+- **GitHub Pages** – hosting the final site (`Khadija3111/Physical-AI---Humanoid-Robotics-Book`).
 - Docusaurus for book website generation.
 - The project must be authored using Docusaurus docs structure.
 
@@ -48,7 +48,7 @@ Follow-up TODOs: None
 | # | Principle | Why it matters for Physical AI & Humanoid Robotics |
 |---|-----------|---------------------------------------------------|
 | 1 | **Scientific Accuracy** | Every claim about sensors, actuators, control loops, or AI algorithms must be traceable to primary research or vendor datasheets. |
-| 2 | **Clarity for Engineers** | The audience is computer‑science & robotics students; explanations must be concise, with diagrams and code snippets that compile out‑of‑the‑box. |
+| 2 | **Clarity for Engineers** | The audience is computer‑science & robotics students ; explanations must be concise, with diagrams and code snippets  out‑of‑the‑box. |
 | 3 | **Reproducibility** | All code, simulation setups, and hardware bill‑of‑materials (BOM) are version‑controlled and runnable on a standard Linux VM. |
 | 4 | **Rigor & Peer Review** | Preference for peer‑reviewed journal/conference papers; pre‑prints are allowed if clearly marked. |
 | 5 | **Open‑Source Ethos** | All assets (text, figures, code) are released under an OSI‑approved license (e.g., MIT/CC‑BY‑4.0). |

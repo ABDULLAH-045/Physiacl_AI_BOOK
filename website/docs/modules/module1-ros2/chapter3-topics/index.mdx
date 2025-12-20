@@ -1,0 +1,9 @@
+---
+sidebar_position: 3
+---
+
+# Chapter 3: Topics for Real-Time Communication in Physical AI and Humanoid Robotics
+
+In the dynamic world of Physical AI and humanoid robotics, real-time data exchange is the lifeblood of intelligent operation. This chapter delves into the fundamental concept of ROS 2 Topics, which enable efficient, real-time data flow using robust publisher-subscriber patterns. You will learn how to create and manage publisher and subscriber nodes to broadcast sensor readings, control commands, and internal state information across your robot's distributed intelligence system.
+
+We will cover defining custom message types (`.msg` files) to encapsulate the rich data structures required by complex humanoid sensors and actuators. Furthermore, you will master applying message filtering with QoS (Quality of Service) profiles, which are essential for ensuring reliable and timely delivery of critical data—whether it's high-frequency joint encoder feedback or low-latency AI inference results. Technical topics include `rclpy.Publisher` and `rclpy.Subscriber`, custom `.msg` files, and the strategic application of QoS settings. Exercises will involve creating a custom message for comprehensive robot status updates (e.g., joint angles, battery, AI confidence scores) and implementing a filtered subscriber to monitor specific, critical data streams, providing hands-on experience in building the communication backbone for adaptive Physical AI.

@@ -1,0 +1,11 @@
+---
+sidebar_position: 4
+---
+
+# Chapter 4: Services & Actions for Orchestrating Physical AI Behaviors
+
+To achieve truly intelligent and autonomous behavior in humanoid robotics and Physical AI, robots need to execute complex tasks that often involve precise sequencing, feedback, and long-duration operations. This chapter delves into the implementation of request-response and long-running goal patterns using ROS 2 services and actions, respectively.
+
+You will learn the key differences between topics (for continuous data streams), services (for immediate, single-shot requests), and actions (for asynchronous, goal-oriented tasks with feedback), and how to strategically apply each to orchestrate sophisticated robot behaviors. We will explore how ROS 2 services can be used for immediate, critical tasks like triggering safety stops or querying system states, while actions provide the framework for more intricate, multi-step operations such as navigating to a location, manipulating objects, or executing gait patterns in a humanoid.
+
+Technical topics include `rclpy.Service` and `rclpy.Action`, covering the creation and interaction of service and action servers and clients. Hands-on exercises will involve creating a service to trigger a humanoid robot's pose reset (a common safety or initialization procedure) and implementing an action to make the robot walk a specific distance or perform a complex manipulation sequence, providing practical experience in commanding and coordinating the physical actions of intelligent robots.
