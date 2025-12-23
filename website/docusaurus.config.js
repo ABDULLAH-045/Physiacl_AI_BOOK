@@ -25,7 +25,7 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   // baseUrl: '/',
  url: 'https://abdullah-045.github.io',
-  baseUrl: '/Physiacl_AI_BOOK/',
+ baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
